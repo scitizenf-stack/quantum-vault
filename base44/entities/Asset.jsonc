@@ -1,0 +1,67 @@
+{
+  "name": "Asset",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the asset"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Ticker symbol"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "stock",
+        "crypto",
+        "etf",
+        "bond",
+        "commodity"
+      ],
+      "description": "Type of asset"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Number of units held"
+    },
+    "avg_buy_price": {
+      "type": "number",
+      "description": "Average purchase price per unit"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current market price per unit"
+    },
+    "change_24h": {
+      "type": "number",
+      "description": "24h price change percentage"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "URL to the asset logo"
+    }
+  },
+  "required": [
+    "name",
+    "symbol",
+    "type",
+    "quantity",
+    "avg_buy_price",
+    "current_price"
+  ],
+  "rls": {
+    "create": {
+      "created_by": "{{user.email}}"
+    },
+    "read": {
+      "created_by": "{{user.email}}"
+    },
+    "update": {
+      "created_by": "{{user.email}}"
+    },
+    "delete": {
+      "created_by": "{{user.email}}"
+    }
+  }
+}

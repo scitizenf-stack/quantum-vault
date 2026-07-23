@@ -1,0 +1,35 @@
+{
+  "name": "AiLog",
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string",
+      "description": "Model name"
+    },
+    "tokens_in": {
+      "type": "number",
+      "description": "Input tokens"
+    },
+    "tokens_out": {
+      "type": "number",
+      "description": "Output tokens"
+    },
+    "cost": {
+      "type": "number",
+      "description": "Cost in USD"
+    },
+    "latency_ms": {
+      "type": "number",
+      "description": "Latency in milliseconds"
+    },
+    "prompt_summary": {
+      "type": "string",
+      "description": "Prompt summary"
+    }
+  },
+  "required": [
+    "model",
+    "tokens_in",
+    "tokens_out"
+  ]
+}

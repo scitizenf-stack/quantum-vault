@@ -1,0 +1,82 @@
+{
+  "name": "ProfitSplit",
+  "type": "object",
+  "properties": {
+    "period_start": {
+      "type": "string",
+      "format": "date",
+      "description": "Period start date"
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date",
+      "description": "Period end date"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "Owning user id"
+    },
+    "gross_profit": {
+      "type": "number",
+      "description": "Gross profit for the period"
+    },
+    "user_share": {
+      "type": "number",
+      "description": "User's share amount"
+    },
+    "platform_share": {
+      "type": "number",
+      "description": "Platform's share amount"
+    },
+    "split_percentage": {
+      "type": "number",
+      "description": "Split percentage applied"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "trading",
+        "telecom",
+        "staking",
+        "referral"
+      ],
+      "description": "Profit source"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "calculated",
+        "paid",
+        "disputed"
+      ],
+      "description": "Split status"
+    },
+    "paid_at": {
+      "type": "string",
+      "format": "date",
+      "description": "When paid"
+    },
+    "transaction_ref": {
+      "type": "string",
+      "description": "Reference transaction id"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "auto_calculated": {
+      "type": "boolean",
+      "default": true,
+      "description": "Was auto-calculated"
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Who approved the split"
+    }
+  },
+  "required": [
+    "period_start",
+    "period_end",
+    "user_id"
+  ]
+}

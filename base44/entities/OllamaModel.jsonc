@@ -1,0 +1,36 @@
+{
+  "name": "OllamaModel",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Model name"
+    },
+    "size": {
+      "type": "string",
+      "description": "Model size (7B, 13B, etc)"
+    },
+    "quantization": {
+      "type": "string",
+      "description": "Quantization (Q4, Q8, etc)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "pulling",
+        "error"
+      ],
+      "default": "available",
+      "description": "Model status"
+    },
+    "pull_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When model was pulled"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

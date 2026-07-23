@@ -1,0 +1,64 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "asset_name": {
+      "type": "string",
+      "description": "Name of the asset"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Ticker symbol"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "buy",
+        "sell",
+        "transfer_in",
+        "transfer_out",
+        "dividend",
+        "interest"
+      ],
+      "description": "Transaction type"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Number of units"
+    },
+    "price_per_unit": {
+      "type": "number",
+      "description": "Price per unit at time of transaction"
+    },
+    "total_amount": {
+      "type": "number",
+      "description": "Total transaction amount"
+    },
+    "fee": {
+      "type": "number",
+      "description": "Transaction fee"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "pending",
+        "failed",
+        "cancelled"
+      ],
+      "default": "completed",
+      "description": "Transaction status"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    }
+  },
+  "required": [
+    "asset_name",
+    "symbol",
+    "type",
+    "total_amount",
+    "status"
+  ]
+}

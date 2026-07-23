@@ -1,0 +1,88 @@
+{
+  "name": "Wallet",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Owning user id (unique)"
+    },
+    "balance_usd": {
+      "type": "number",
+      "default": 0,
+      "description": "USD balance"
+    },
+    "balance_btc": {
+      "type": "number",
+      "default": 0,
+      "description": "BTC balance"
+    },
+    "balance_eth": {
+      "type": "number",
+      "default": 0,
+      "description": "ETH balance"
+    },
+    "total_deposited": {
+      "type": "number",
+      "default": 0,
+      "description": "Lifetime deposits"
+    },
+    "total_withdrawn": {
+      "type": "number",
+      "default": 0,
+      "description": "Lifetime withdrawals"
+    },
+    "total_earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Lifetime earnings"
+    },
+    "auto_trading_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Auto-trading enabled"
+    },
+    "auto_split_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Auto profit-split enabled"
+    },
+    "split_percentage": {
+      "type": "number",
+      "default": 20,
+      "description": "Profit split percentage"
+    },
+    "trading_strategy": {
+      "type": "string",
+      "enum": [
+        "conservative",
+        "balanced",
+        "aggressive",
+        "custom"
+      ],
+      "description": "Trading strategy"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Last updated date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "frozen",
+        "suspended"
+      ],
+      "default": "active",
+      "description": "Wallet status"
+    },
+    "kyc_verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "KYC verified"
+    }
+  },
+  "required": [
+    "user_id"
+  ]
+}

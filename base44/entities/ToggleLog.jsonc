@@ -1,0 +1,81 @@
+{
+  "name": "ToggleLog",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Acting user id"
+    },
+    "device_id": {
+      "type": "string",
+      "description": "Affected device id"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "activate",
+        "deactivate",
+        "call_out",
+        "sms_out",
+        "ip_assign",
+        "webrtc_start",
+        "webrtc_end",
+        "plan_change",
+        "wallet_credit",
+        "wallet_debit"
+      ],
+      "description": "Action performed"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failed",
+        "pending"
+      ],
+      "description": "Action status"
+    },
+    "request_payload": {
+      "type": "string",
+      "description": "JSON request payload"
+    },
+    "response_payload": {
+      "type": "string",
+      "description": "JSON response payload"
+    },
+    "error_message": {
+      "type": "string",
+      "description": "Error message if failed"
+    },
+    "worker_version": {
+      "type": "string",
+      "description": "Worker version"
+    },
+    "ip_address": {
+      "type": "string",
+      "description": "Source IP address"
+    },
+    "duration_ms": {
+      "type": "number",
+      "description": "Duration in milliseconds"
+    },
+    "cost_usd": {
+      "type": "number",
+      "description": "Cost in USD"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date",
+      "description": "Event timestamp"
+    },
+    "metadata": {
+      "type": "string",
+      "description": "Additional JSON metadata"
+    }
+  },
+  "required": [
+    "user_id",
+    "action",
+    "status"
+  ]
+}

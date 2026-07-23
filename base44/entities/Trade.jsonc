@@ -1,0 +1,68 @@
+{
+  "name": "Trade",
+  "type": "object",
+  "properties": {
+    "strategy": {
+      "type": "string",
+      "description": "Strategy name"
+    },
+    "pair": {
+      "type": "string",
+      "description": "Trading pair"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "BUY",
+        "SELL"
+      ],
+      "description": "Trade side"
+    },
+    "qty": {
+      "type": "number",
+      "description": "Quantity"
+    },
+    "price": {
+      "type": "number",
+      "description": "Execution price"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total value"
+    },
+    "fee": {
+      "type": "number",
+      "default": 0,
+      "description": "Fee paid"
+    },
+    "txHash": {
+      "type": "string",
+      "description": "Transaction hash"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PAPER",
+        "FILLED",
+        "CANCELLED"
+      ],
+      "default": "PAPER",
+      "description": "Trade status"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Execution time"
+    },
+    "pnl": {
+      "type": "number",
+      "default": 0,
+      "description": "P&L for this trade"
+    }
+  },
+  "required": [
+    "strategy",
+    "pair",
+    "side"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "ConnectedAccount",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "exchange",
+        "wallet"
+      ],
+      "description": "Connection type"
+    },
+    "exchange": {
+      "type": "string",
+      "enum": [
+        "coinbase",
+        "kraken",
+        "binance"
+      ],
+      "description": "Exchange name (if type=exchange)"
+    },
+    "apiKey": {
+      "type": "string",
+      "description": "API key (masked after save)"
+    },
+    "apiSecret": {
+      "type": "string",
+      "description": "API secret (masked after save)"
+    },
+    "walletAddress": {
+      "type": "string",
+      "description": "Public wallet address (if type=wallet)"
+    },
+    "label": {
+      "type": "string",
+      "description": "User-defined label"
+    },
+    "connectedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this account was connected"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "error",
+        "pending"
+      ],
+      "default": "pending",
+      "description": "Connection status"
+    }
+  },
+  "required": [
+    "type"
+  ]
+}

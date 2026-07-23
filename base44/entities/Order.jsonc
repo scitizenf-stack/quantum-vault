@@ -1,0 +1,41 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "object",
+      "description": "Order items as JSON"
+    },
+    "total": {
+      "type": "number",
+      "description": "Order total amount"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processing",
+        "completed",
+        "cancelled",
+        "refunded"
+      ],
+      "default": "pending",
+      "description": "Order status"
+    },
+    "payment_method": {
+      "type": "string",
+      "description": "Payment method used"
+    },
+    "customer_email": {
+      "type": "string",
+      "description": "Customer email address"
+    }
+  },
+  "required": [
+    "items",
+    "total",
+    "status",
+    "payment_method",
+    "customer_email"
+  ]
+}

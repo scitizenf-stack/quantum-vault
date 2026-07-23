@@ -1,0 +1,37 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The role of the user in the app",
+      "enum": [
+        "admin",
+        "user"
+      ]
+    },
+    "solana_wallet_address": {
+      "type": "string",
+      "description": "Solana wallet address holding the portfolio's SOL"
+    },
+    "tokens_balance": {
+      "type": "number",
+      "description": "SOL token balance (quantity)"
+    },
+    "btc_balance": {
+      "type": "number",
+      "description": "BTC holdings quantity"
+    },
+    "paxg_balance": {
+      "type": "number",
+      "description": "PAXG (tokenized gold) holdings quantity"
+    },
+    "xrp_balance": {
+      "type": "number",
+      "description": "XRP holdings quantity"
+    }
+  },
+  "required": [
+    "role"
+  ]
+}

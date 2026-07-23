@@ -1,0 +1,37 @@
+{
+  "name": "Vault",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Vault name"
+    },
+    "protocol": {
+      "type": "string",
+      "description": "Protocol (Yearn, Aave, Curve)"
+    },
+    "tvl": {
+      "type": "number",
+      "description": "Total value locked"
+    },
+    "apy": {
+      "type": "number",
+      "description": "Annual percentage yield"
+    },
+    "user_deposit": {
+      "type": "number",
+      "description": "User deposit amount"
+    },
+    "earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Amount earned"
+    }
+  },
+  "required": [
+    "name",
+    "protocol",
+    "tvl",
+    "apy"
+  ]
+}

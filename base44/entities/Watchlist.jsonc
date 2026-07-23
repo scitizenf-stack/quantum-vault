@@ -1,0 +1,48 @@
+{
+  "name": "Watchlist",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Asset name"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Ticker symbol"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "stock",
+        "crypto",
+        "etf",
+        "bond",
+        "commodity"
+      ],
+      "description": "Asset type"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current price"
+    },
+    "change_24h": {
+      "type": "number",
+      "description": "24h change percentage"
+    },
+    "target_price": {
+      "type": "number",
+      "description": "Target buy/sell price"
+    },
+    "alert_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether price alerts are enabled"
+    }
+  },
+  "required": [
+    "name",
+    "symbol",
+    "type",
+    "current_price"
+  ]
+}

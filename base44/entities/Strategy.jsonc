@@ -1,0 +1,62 @@
+{
+  "name": "Strategy",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Strategy name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Arbitrage",
+        "Market Making",
+        "Momentum",
+        "Stat Arb",
+        "Grid"
+      ],
+      "description": "Strategy type"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "PAUSED",
+        "STOPPED"
+      ],
+      "default": "PAUSED",
+      "description": "Current status"
+    },
+    "targetPair": {
+      "type": "string",
+      "description": "Trading pair e.g. BTC/USDT"
+    },
+    "riskLimit": {
+      "type": "number",
+      "description": "Max risk per trade in USD"
+    },
+    "maxPosition": {
+      "type": "number",
+      "description": "Max position size in USD"
+    },
+    "pnl": {
+      "type": "number",
+      "default": 0,
+      "description": "Total P&L in USD"
+    },
+    "trades": {
+      "type": "number",
+      "default": 0,
+      "description": "Total trade count"
+    },
+    "winRate": {
+      "type": "number",
+      "default": 0,
+      "description": "Win rate percentage"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
+}

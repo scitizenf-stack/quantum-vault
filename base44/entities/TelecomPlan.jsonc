@@ -1,0 +1,90 @@
+{
+  "name": "TelecomPlan",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Plan name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly unique slug"
+    },
+    "billing_type": {
+      "type": "string",
+      "enum": [
+        "flat_rate",
+        "per_minute",
+        "per_mb",
+        "hybrid"
+      ],
+      "description": "Billing model"
+    },
+    "price_usd": {
+      "type": "number",
+      "description": "Price in USD"
+    },
+    "data_limit_mb": {
+      "type": "number",
+      "description": "Data limit in MB"
+    },
+    "voice_minutes": {
+      "type": "number",
+      "description": "Voice minutes included"
+    },
+    "sms_limit": {
+      "type": "number",
+      "description": "SMS limit included"
+    },
+    "routing_primary": {
+      "type": "string",
+      "enum": [
+        "RF_MESH",
+        "LTE",
+        "WIFI_CALLING",
+        "PSTN"
+      ],
+      "description": "Primary routing path"
+    },
+    "routing_fallback": {
+      "type": "string",
+      "enum": [
+        "Twilio_SIP",
+        "PSTN",
+        "none"
+      ],
+      "description": "Fallback routing path"
+    },
+    "includes_calls": {
+      "type": "boolean",
+      "default": true,
+      "description": "Includes voice calls"
+    },
+    "includes_sms": {
+      "type": "boolean",
+      "default": true,
+      "description": "Includes SMS"
+    },
+    "includes_data": {
+      "type": "boolean",
+      "default": false,
+      "description": "Includes data"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Is plan active"
+    },
+    "description": {
+      "type": "string",
+      "description": "Plan description"
+    },
+    "user_count": {
+      "type": "number",
+      "description": "Number of users on this plan"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

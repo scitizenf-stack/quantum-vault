@@ -1,0 +1,95 @@
+{
+  "name": "Device",
+  "type": "object",
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "description": "Unique device identifier"
+    },
+    "mac_address": {
+      "type": "string"
+    },
+    "imei": {
+      "type": "string"
+    },
+    "iccid": {
+      "type": "string"
+    },
+    "antenna_type": {
+      "type": "string",
+      "enum": [
+        "RF_MESH",
+        "LTE_CAT1",
+        "LTE_CAT4",
+        "5G_SA",
+        "ESIM",
+        "WIFI_CALLING"
+      ],
+      "description": "Antenna/radio type"
+    },
+    "sim_type": {
+      "type": "string",
+      "enum": [
+        "physical",
+        "esim",
+        "virtual"
+      ],
+      "description": "SIM type"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "unregistered",
+        "activating",
+        "active",
+        "inactive",
+        "error",
+        "suspended"
+      ],
+      "default": "unregistered",
+      "description": "Device status"
+    },
+    "plan_id": {
+      "type": "string",
+      "description": "Assigned TelecomPlan id"
+    },
+    "ip_address": {
+      "type": "string"
+    },
+    "sip_extension": {
+      "type": "string"
+    },
+    "webrtc_enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "WebRTC enabled"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "Owning user id"
+    },
+    "registered_at": {
+      "type": "string",
+      "format": "date",
+      "description": "Registration date"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date",
+      "description": "Last seen date"
+    },
+    "signal_strength": {
+      "type": "number",
+      "description": "Signal strength"
+    },
+    "firmware_version": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "device_id"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "ApiKey",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Key label"
+    },
+    "key_prefix": {
+      "type": "string",
+      "description": "Key prefix (masked)"
+    },
+    "scopes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Allowed scopes"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Is key active"
+    },
+    "last_used": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last usage timestamp"
+    }
+  },
+  "required": [
+    "name",
+    "key_prefix"
+  ]
+}

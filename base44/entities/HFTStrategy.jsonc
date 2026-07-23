@@ -1,0 +1,47 @@
+{
+  "name": "HFTStrategy",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Strategy identifier"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Arbitrage",
+        "Market Making",
+        "Momentum",
+        "Stat Arb",
+        "Trend Follow",
+        "Grid"
+      ],
+      "description": "Strategy type"
+    },
+    "pnl": {
+      "type": "number",
+      "description": "Realized PnL in USD"
+    },
+    "sharpe": {
+      "type": "number",
+      "description": "Sharpe ratio"
+    },
+    "trades": {
+      "type": "number",
+      "description": "Total trade count"
+    },
+    "fill_rate": {
+      "type": "number",
+      "description": "Fill rate percentage"
+    },
+    "running": {
+      "type": "boolean",
+      "default": false,
+      "description": "Is the strategy currently running"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
+}

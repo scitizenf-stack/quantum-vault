@@ -1,0 +1,73 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "code": {
+      "type": "string",
+      "description": "Product code/ticker"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Precious Metals",
+        "Telecom",
+        "Identity",
+        "Hosting",
+        "Developer",
+        "Treasury",
+        "Yield",
+        "AI/LLM",
+        "Platform"
+      ],
+      "description": "Product category"
+    },
+    "family": {
+      "type": "string",
+      "description": "Product family or product line grouping"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price amount"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit label e.g. /oz, /month, /call"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short product description"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Emoji or icon identifier"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "coming_soon",
+        "deprecated"
+      ],
+      "default": "active",
+      "description": "Product availability status"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Featured product"
+    }
+  },
+  "required": [
+    "name",
+    "code",
+    "category",
+    "price",
+    "unit",
+    "description"
+  ]
+}

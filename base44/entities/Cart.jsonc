@@ -1,0 +1,42 @@
+{
+  "name": "Cart",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "Product entity ID"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "product_code": {
+      "type": "string",
+      "description": "Product code"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category"
+    },
+    "price": {
+      "type": "number",
+      "description": "Unit price"
+    },
+    "price_unit": {
+      "type": "string",
+      "description": "Price unit"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1,
+      "description": "Quantity"
+    }
+  },
+  "required": [
+    "product_id",
+    "product_name",
+    "product_code",
+    "price",
+    "quantity"
+  ]
+}

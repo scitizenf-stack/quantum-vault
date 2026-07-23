@@ -1,0 +1,22 @@
+{
+  "name": "StripeConfig",
+  "type": "object",
+  "properties": {
+    "publishableKey": {
+      "type": "string",
+      "description": "Stripe publishable key (pk_...)"
+    },
+    "webhookEndpoint": {
+      "type": "string",
+      "description": "Stripe webhook endpoint URL"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this config was created"
+    }
+  },
+  "required": [
+    "publishableKey"
+  ]
+}

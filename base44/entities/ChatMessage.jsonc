@@ -1,0 +1,35 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "user",
+        "assistant"
+      ],
+      "description": "Message sender role"
+    },
+    "content": {
+      "type": "string",
+      "description": "Message content"
+    },
+    "model": {
+      "type": "string",
+      "description": "AI model used (if assistant)"
+    },
+    "tokens": {
+      "type": "number",
+      "description": "Token count for the message"
+    },
+    "conversation_id": {
+      "type": "string",
+      "description": "Associated conversation ID"
+    }
+  },
+  "required": [
+    "role",
+    "content",
+    "conversation_id"
+  ]
+}

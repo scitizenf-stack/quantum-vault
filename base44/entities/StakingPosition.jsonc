@@ -1,0 +1,38 @@
+{
+  "name": "StakingPosition",
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "description": "Staking protocol (Lido, Jito, etc)"
+    },
+    "asset": {
+      "type": "string",
+      "description": "Asset symbol (SOL, ETH, etc)"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount staked"
+    },
+    "apy": {
+      "type": "number",
+      "description": "Annual percentage yield"
+    },
+    "rewards_earned": {
+      "type": "number",
+      "default": 0,
+      "description": "Total rewards earned"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When staking started"
+    }
+  },
+  "required": [
+    "protocol",
+    "asset",
+    "amount",
+    "apy"
+  ]
+}

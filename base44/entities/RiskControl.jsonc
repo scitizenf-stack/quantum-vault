@@ -1,0 +1,50 @@
+{
+  "name": "RiskControl",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Control name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "drawdown",
+        "exposure",
+        "latency",
+        "volatility",
+        "custom"
+      ],
+      "description": "Control type"
+    },
+    "threshold": {
+      "type": "number",
+      "description": "Trigger threshold value"
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "alert",
+        "pause",
+        "stop"
+      ],
+      "default": "alert",
+      "description": "Action when triggered"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Is control active"
+    },
+    "triggeredCount": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of times triggered"
+    }
+  },
+  "required": [
+    "name",
+    "type",
+    "threshold"
+  ]
+}

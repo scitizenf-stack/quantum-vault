@@ -1,0 +1,48 @@
+{
+  "name": "Deployment",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Version tag"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failed",
+        "in_progress",
+        "queued"
+      ],
+      "default": "queued",
+      "description": "Deployment status"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Deployment time"
+    },
+    "commitHash": {
+      "type": "string",
+      "description": "Git commit hash"
+    },
+    "deployedBy": {
+      "type": "string",
+      "description": "Who deployed"
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "production",
+        "staging",
+        "development"
+      ],
+      "default": "production",
+      "description": "Target environment"
+    }
+  },
+  "required": [
+    "version",
+    "status"
+  ]
+}

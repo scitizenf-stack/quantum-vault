@@ -1,0 +1,47 @@
+{
+  "name": "InsightSignal",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "BUY",
+        "SELL",
+        "HOLD",
+        "WATCH"
+      ],
+      "description": "Signal type"
+    },
+    "asset": {
+      "type": "string",
+      "description": "Asset name or symbol"
+    },
+    "signal": {
+      "type": "string",
+      "description": "Signal description"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "Confidence percentage 0-100"
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Signal timestamp"
+    },
+    "reviewed": {
+      "type": "boolean",
+      "default": false,
+      "description": "Has been reviewed"
+    }
+  },
+  "required": [
+    "type",
+    "asset",
+    "signal"
+  ]
+}

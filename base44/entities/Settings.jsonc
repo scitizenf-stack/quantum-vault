@@ -1,0 +1,23 @@
+{
+  "name": "Settings",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Setting key"
+    },
+    "value": {
+      "type": "string",
+      "description": "Setting value"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last updated"
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+}

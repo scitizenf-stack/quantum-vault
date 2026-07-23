@@ -1,0 +1,37 @@
+{
+  "name": "FeatureFlag",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Flag name"
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "Is flag enabled"
+    },
+    "description": {
+      "type": "string",
+      "description": "What this flag controls"
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "production",
+        "staging",
+        "development"
+      ],
+      "default": "production",
+      "description": "Target environment"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last updated"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

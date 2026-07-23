@@ -1,0 +1,39 @@
+{
+  "name": "Webhook",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "Endpoint URL"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Event types subscribed"
+    },
+    "secret": {
+      "type": "string",
+      "description": "Webhook secret"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Is webhook active"
+    },
+    "last_triggered": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last trigger timestamp"
+    },
+    "fail_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Failure count"
+    }
+  },
+  "required": [
+    "url"
+  ]
+}
